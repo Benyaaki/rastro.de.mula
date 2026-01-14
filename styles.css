@@ -701,4 +701,95 @@ footer {
     .nature-split {
         grid-template-columns: 1fr;
     }
+
+    /* Redesign Features Band for Mobile */
+    .features-band {
+        padding: var(--spacing-md) 0;
+    }
+
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .feature-item {
+        width: 100%;
+        height: 230px;
+        /* Fixed height for uniformity */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        padding: 1.5rem 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .feature-item:hover .feature-icon {
+        opacity: 1;
+        transform: none;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        opacity: 1 !important;
+        /* Force visible */
+        transform: none !important;
+    }
+
+    .feature-hover-card {
+        position: static;
+        transform: none;
+        width: 100%;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        border-radius: 0;
+    }
+
+    .feature-hover-card h3 {
+        color: var(--color-accent);
+        /* Make title visible on dark bg (since card is transparent now) */
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .feature-hover-card p {
+        color: rgba(255, 255, 255, 0.9);
+        /* Light text */
+        font-size: 0.85rem;
+        display: block;
+        /* Ensure it's shown */
+    }
+
+    /* Fix Hero Spacing on Mobile */
+    .hero-content {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* Fix Contact Background on Mobile */
+    .contact-section {
+        background-attachment: scroll;
+        /* "Fixed" backgrounds often fail on mobile */
+        background-position: center;
+    }
 }
